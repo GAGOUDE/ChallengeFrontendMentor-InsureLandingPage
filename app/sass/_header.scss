@@ -8,7 +8,7 @@
         line-height: 80px;
         position: relative;
 
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
             max-width: 100%;
         }
     }
@@ -18,7 +18,7 @@
             width: 115px;
             height: 22px;
         }
-        
+
         @include breakpoint-down(medium) {
             margin-left: 8%;
         }
@@ -35,9 +35,9 @@
             width: 40px;
         }
 
-        & .hamburger{
-            @include breakpoint-down(medium){
-                background-image: url('/images/icon-hamburger.svg');
+        & .hamburger {
+            @include breakpoint-down(medium) {
+                background-image: url('./images/icon-hamburger.svg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
@@ -48,14 +48,15 @@
             }
         }
 
-        &.active .hamburger{
-            @include breakpoint-down(medium){
+        &.active .hamburger {
+            @include breakpoint-down(medium) {
                 display: none;
             }
         }
+
         &.active .close {
             @include breakpoint-down(medium) {
-                background-image: url('/images/icon-close.svg');
+                background-image: url('./images/icon-close.svg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
@@ -64,7 +65,7 @@
                 display: block;
             }
         }
-        
+
     }
 
     &_links {
@@ -95,24 +96,25 @@
             color: $darkGrayishViolet;
             transition: color 300ms ease-in-out;
 
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-right: 28px;
-                
+
                 @include breakpoint-down(small) {
                     margin-right: 0;
                 }
             }
 
-            &:hover{
+            &:hover {
                 color: $black;
             }
 
-            @include breakpoint-down(medium){
+            @include breakpoint-down(medium) {
                 display: block;
                 color: $white;
                 font-size: $font-large;
                 margin-top: 15px;
-                line-height: 50px;;
+                line-height: 50px;
+                ;
             }
         }
 
@@ -120,11 +122,11 @@
             left: 0;
         }
 
-        &.active::before{
+        &.active::before {
 
-            @include breakpoint-down(small){
+            @include breakpoint-down(small) {
                 content: "";
-                background-image: url('/images/bg-pattern-intro-right-desktop.svg');
+                background-image: url('./images/bg-pattern-intro-right-desktop.svg');
                 background-repeat: no-repeat;
                 position: absolute;
                 display: block;
@@ -135,13 +137,13 @@
                 left: -200px;
                 transform: rotate(115deg);
                 top: 270px;
-    
+
             }
-            
+
         }
     }
 
-    &_btn{
+    &_btn {
         @include breakpoint-down(medium) {
             background: transparent;
             font-size: $font-large;
@@ -152,7 +154,7 @@
         }
 
         &:hover {
-            @include breakpoint-down(medium){
+            @include breakpoint-down(medium) {
                 background-color: $white;
                 color: $black;
             }
