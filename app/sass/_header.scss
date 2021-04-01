@@ -1,0 +1,161 @@
+.header {
+    background-color: $white;
+    height: 80px;
+    z-index: 1000;
+    position: relative;
+
+    nav {
+        line-height: 80px;
+        position: relative;
+
+        @include breakpoint-down(medium){
+            max-width: 100%;
+        }
+    }
+
+    &_logo {
+        img {
+            width: 115px;
+            height: 22px;
+        }
+        
+        @include breakpoint-down(medium) {
+            margin-left: 8%;
+        }
+    }
+
+    &_toggle {
+        position: relative;
+        cursor: pointer;
+
+        @include breakpoint-down(medium) {
+            margin-right: 8%;
+            background: violet;
+            height: 40px;
+            width: 40px;
+        }
+
+        & .hamburger{
+            @include breakpoint-down(medium){
+                background-image: url('/images/icon-hamburger.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                width: 40px;
+                height: 40px;
+                display: block;
+                transition: 0.5s ease-in-out;
+            }
+        }
+
+        &.active .hamburger{
+            @include breakpoint-down(medium){
+                display: none;
+            }
+        }
+        &.active .close {
+            @include breakpoint-down(medium) {
+                background-image: url('/images/icon-close.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+        }
+        
+    }
+
+    &_links {
+
+        @include breakpoint-down(medium) {
+            background-color: $darkViolet;
+            display: block;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 80px;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+            bottom: 0;
+            left: -100%;
+            transition: 0.5s;
+            text-align: center;
+            z-index: 990;
+            overflow: hidden;
+        }
+
+        a {
+            position: relative;
+            font-size: $font-sm;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $darkGrayishViolet;
+            transition: color 300ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 28px;
+                
+                @include breakpoint-down(small) {
+                    margin-right: 0;
+                }
+            }
+
+            &:hover{
+                color: $black;
+            }
+
+            @include breakpoint-down(medium){
+                display: block;
+                color: $white;
+                font-size: $font-large;
+                margin-top: 15px;
+                line-height: 50px;;
+            }
+        }
+
+        &.active {
+            left: 0;
+        }
+
+        &.active::before{
+
+            @include breakpoint-down(small){
+                content: "";
+                background-image: url('/images/bg-pattern-intro-right-desktop.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                display: block;
+                z-index: 900;
+                width: 600px;
+                height: 100%;
+                right: 0;
+                left: -200px;
+                transform: rotate(115deg);
+                top: 270px;
+    
+            }
+            
+        }
+    }
+
+    &_btn{
+        @include breakpoint-down(medium) {
+            background: transparent;
+            font-size: $font-large;
+            color: $white;
+            border: 2px solid $white;
+            width: 85%;
+            margin: 25px auto;
+        }
+
+        &:hover {
+            @include breakpoint-down(medium){
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+}

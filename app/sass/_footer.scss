@@ -1,0 +1,128 @@
+/* FOOTER SECTION */
+.footer{
+    position: relative;
+    background-color: $veryLightGray;
+    overflow: hidden;
+    height: 350px;
+
+    @include breakpoint-down(small) {
+        height: 835px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .container{
+        position: relative;
+        z-index: 10;
+    }
+
+    &_designRightDesktop{
+        transform: rotate(-65deg);
+        position: absolute;
+        top: -190px;
+        z-index: 9;
+
+        & img{
+            height: 95%;
+            width: 70%;
+
+            @include breakpoint-down(small){
+               width: 100%;
+            }
+        }
+
+        @include breakpoint-down(small){
+            top: -63%;
+            transform: scale(-1);
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    &_heading{
+        margin-top: 60px;
+
+        @include breakpoint-down(small){
+            display: block;
+            text-align: center;
+            margin-top: 100px;
+        }
+    }
+
+    &_social{
+        
+        & svg{
+            cursor: pointer;
+            transition: fill 150ms ease-in-out;
+        }
+
+        & svg:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        & svg:hover path {
+            fill: $black;
+        }
+
+        @include breakpoint-down(small){
+            margin-top: 20px;
+        }
+    }
+
+    &_line{
+        width: 100%;
+        height: 0.5px;
+        opacity: 0.3;
+        background-color: $darkGrayishViolet;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &_widgets{
+        width: 85%;
+
+        @include breakpoint-down(medium){
+            width: 100%;
+        }
+
+        @include breakpoint-down(small){
+            display: block;
+        }
+    }
+
+    &_widget_title{
+        margin-bottom: 20px;
+        & a{
+            color: $darkGrayishViolet;
+            text-transform: uppercase;
+            transition: color 300ms ease-in-out;
+        }
+
+        & a:hover{
+            color: $black;
+        }
+
+        @include breakpoint-down(small) {
+            margin-top: 20px;
+        }
+        
+    }
+
+    &_widget_description{
+        
+        & a{
+            display: block;
+            text-transform: uppercase;
+            color: $black;
+            line-height: 1.5;
+            transition: all 300ms ease-in-out;
+        }
+
+        & a:hover{
+            
+            text-decoration: underline;
+        }
+
+        
+    }
+}

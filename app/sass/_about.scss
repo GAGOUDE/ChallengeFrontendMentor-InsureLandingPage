@@ -1,0 +1,76 @@
+.about{
+    background-color: $white;
+    margin-bottom: 130px;
+
+    .container{
+        background: $darkViolet;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+
+
+        @include breakpoint-down(small){
+            max-width: 92%;
+            height: 330px;
+        }
+    }
+
+    &_text h1{
+        position: absolute;
+        top: 14%;
+        left: 6%;
+
+        @include breakpoint-down(small) {
+            top: 0;
+            display: block;
+            text-align: center;
+        }
+
+        @include breakpoint-down(extraSmall){
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    &_btn{
+        position: absolute;
+        top: 40%;
+        left: 80%;
+        z-index: 10;
+        background-color: transparent;
+
+        @include breakpoint-down(medium){
+            left: 75%;
+        }
+
+        @include breakpoint-down(small) {
+            top: 65%;
+            left: 33%;
+        }
+        
+    }
+
+    &_designRightDesktop{
+        position: absolute;
+        left: 66%;
+        bottom: -218px;
+
+        @include breakpoint-down(medium) {
+            right: 0;
+            bottom: -85px;
+            left: 660px;
+
+        }
+
+        @include breakpoint-down(small){
+            left: 73%;
+            bottom: 50px;
+        }
+
+        @include breakpoint-down(extraSmall) {
+            left: 59%;
+            bottom: 104px;
+        }
+    }
+
+}
