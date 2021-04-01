@@ -1,21 +1,22 @@
-.about{
+/* ABOUT SECTION */
+.about {
     background-color: $white;
     margin-bottom: 130px;
 
-    .container{
+    .container {
         background: $darkViolet;
         height: 250px;
         position: relative;
         overflow: hidden;
 
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             max-width: 92%;
             height: 330px;
         }
     }
 
-    &_text h1{
+    &_text h1 {
         position: absolute;
         top: 14%;
         left: 6%;
@@ -26,20 +27,20 @@
             text-align: center;
         }
 
-        @include breakpoint-down(extraSmall){
+        @include breakpoint-down(extraSmall) {
             font-size: 40px;
             margin-bottom: 0;
         }
     }
 
-    &_btn{
+    &_btn {
         position: absolute;
         top: 40%;
         left: 80%;
         z-index: 10;
         background-color: transparent;
 
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
             left: 75%;
         }
 
@@ -47,10 +48,10 @@
             top: 65%;
             left: 33%;
         }
-        
+
     }
 
-    &_designRightDesktop{
+    &_designRightDesktop {
         position: absolute;
         left: 66%;
         bottom: -218px;
@@ -62,7 +63,7 @@
 
         }
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             left: 73%;
             bottom: 50px;
         }
