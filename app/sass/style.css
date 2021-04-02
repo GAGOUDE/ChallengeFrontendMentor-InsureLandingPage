@@ -227,24 +227,22 @@ a {
     position: relative;
     width: 40px;
     height: 40px;
-    display: block;
+    display: none;
   }
   .header_toggle .close img {
-    position: relative;
-    top: -5px;
-    left: 0;
+    position: absolute;
     width: 40px;
   }
 }
 
 @media (max-width: 63.9375em) {
-  .header_toggle .close.active .close {
+  .header_toggle.active .close {
     display: block;
   }
 }
 
 @media (max-width: 63.9375em) {
-  .header_toggle_links {
+  .header_links {
     background-color: #2d2640;
     display: block;
     -webkit-box-orient: vertical;
@@ -269,7 +267,7 @@ a {
   }
 }
 
-.header_toggle_links a {
+.header_links a {
   position: relative;
   font-size: 0.875rem;
   font-weight: 700;
@@ -279,22 +277,22 @@ a {
   transition: color 300ms ease-in-out;
 }
 
-.header_toggle_links a:not(:last-child) {
+.header_links a:not(:last-child) {
   margin-right: 28px;
 }
 
 @media (max-width: 47.9375em) {
-  .header_toggle_links a:not(:last-child) {
+  .header_links a:not(:last-child) {
     margin-right: 0;
   }
 }
 
-.header_toggle_links a:hover {
+.header_links a:hover {
   color: #000;
 }
 
 @media (max-width: 63.9375em) {
-  .header_toggle_links a {
+  .header_links a {
     display: block;
     color: #fff;
     font-size: 1.125rem;
@@ -303,12 +301,12 @@ a {
   }
 }
 
-.header_toggle_links.active {
+.header_links.active {
   left: 0;
 }
 
 @media (max-width: 47.9375em) {
-  .header_toggle_links.active::before {
+  .header_links.active::before {
     content: "";
     background-image: url("./images/bg-pattern-intro-right-desktop.svg");
     background-repeat: no-repeat;
@@ -326,7 +324,7 @@ a {
 }
 
 @media (max-width: 63.9375em) {
-  .header_toggle_btn {
+  .header_btn {
     background: transparent;
     font-size: 1.125rem;
     color: #fff;
@@ -337,7 +335,7 @@ a {
 }
 
 @media (max-width: 63.9375em) {
-  .header_toggle_btn:hover {
+  .header_btn:hover {
     background-color: #fff;
     color: #000;
   }
