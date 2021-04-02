@@ -323,7 +323,7 @@ a {
   left: 0;
 }
 
-@media (max-width: 47.9375em) {
+@media (max-width: 20em) {
   .header_links.active::before {
     content: "";
     background-image: url("/images/bg-pattern-intro-right-desktop.svg");
