@@ -1,42 +1,41 @@
 /* INTRO SECTION */
-.intro{
+.intro {
     background: $darkViolet;
     height: 600px;
     position: relative;
     right: 0;
     left: 0;
 
-    @include breakpoint-down(medium){
+    @include breakpoint-down(medium) {
         height: auto;
-        
+
     }
-    
-    &_content{
+
+    &_content {
         display: grid;
         grid-template-columns: 50% 50%;
         position: relative;
-        
-        
-        @include breakpoint-down(medium){
+
+
+        @include breakpoint-down(medium) {
             max-width: 100%;
             height: auto;
             display: flex;
-            flex-direction: column-reverse;            
+            flex-direction: column-reverse;
         }
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             right: 0;
             left: 0;
         }
     }
 
-    &_text{      
+    &_text {
 
         @include breakpoint-down(medium) {
             text-align: center;
             padding: 50px 28px;
         }
-
     }
 
     &_line {
@@ -45,11 +44,11 @@
         height: 1px;
         background-color: $white;
 
-        @include breakpoint-down(medium){
+        @include breakpoint-down(medium) {
             margin: 30px auto;
         }
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             display: none;
         }
     }
@@ -66,54 +65,45 @@
         @include breakpoint-down(medium) {
             width: 80%;
             text-align: center;
-            margin:30px  auto;
+            margin: 30px auto;
         }
     }
 
-    &_image{
+    &_image {
         position: relative;
         top: 100px;
         bottom: 0;
         margin: 0 auto;
         left: 53px;
 
-        & img{
+        @include breakpoint-down(medium) {
+            top: 0;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @include breakpoint-down(small) {
+            max-width: auto;
+            left: 0;
+        }
+
+        & img {
             position: relative;
             width: 100%;
             max-width: 500px;
             height: auto;
-            
-            
 
             @include breakpoint-down(medium) {
-               right: 0;
-               left: 0;
-               
-                
+                right: 0;
+                left: 0;
             }
+
             @include breakpoint-down(small) {
-               left: 0;
-               right: 0;
-               
+                left: 0;
+                right: 0;
             }
         }
-
-    
-
-        @include breakpoint-down(medium){
-           top: 0;
-           max-width: 500px;
-           width: 100%;
-           margin: 0 auto;
-
-        } 
-
-        @include breakpoint-down(small) {
-             max-width: auto;
-             left: 0;
-        }
-
-        
     }
 }
 
@@ -126,34 +116,39 @@
     position: absolute;
     top: 0;
     left: 73%;
-   
 }
 
-.intro_designRightDesktop img{
+.intro_designRightDesktop img {
     width: 100%;
-    
 }
 
 .intro_designLeftMobile {
     position: absolute;
     left: 0;
-    
+
     @include breakpoint-down(medium) {
         top: 58%;
     }
 
-    @include breakpoint-down(small){
-        top: 50%;
+    @include breakpoint-down(small) {
+        top: 45%;
     }
 
     @include breakpoint-down(extraSmall) {
-        top: 39%;
+        top: 35%;
     }
 }
 
-.intro_designRightMobile{
+.intro_designRightMobile {
     position: absolute;
     right: 0;
     bottom: -18%;
-}
 
+    @include breakpoint-down(small) {
+        bottom: -22%;
+    }
+
+    @include breakpoint-down(extraSmall) {
+        bottom: -26%;
+    }
+}

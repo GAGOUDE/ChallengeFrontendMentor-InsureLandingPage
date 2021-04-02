@@ -35,7 +35,11 @@ h1 {
     }
 
     @include breakpoint-down(small) {
-        font-size: 45px;
+        font-size: 40px;
+    }
+
+    @include breakpoint-down(extraSmall) {
+        font-size: 35px;
     }
 }
 
